@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <context-param>
+        <param-name>globalSetting</param-name>
+        <param-value>This is a global context parameter.</param-value>
+    </context-param>
+
+    <servlet>
+        <description/>
+        <display-name>Bai2</display-name>
+        <servlet-name>Bai2</servlet-name>
+        <servlet-class>fit.iuh.se.lehuyhung_21066381_tuan1.Bai2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Bai2</servlet-name>
+        <url-pattern>/Bai2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description/>
+        <display-name>Bai3</display-name>
+        <servlet-name>Bai3</servlet-name>
+        <servlet-class>fit.iuh.se.lehuyhung_21066381_tuan1.Bai3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Bai3</servlet-name>
+        <url-pattern>/Bai3</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description/>
+        <display-name>Bai4</display-name>
+        <servlet-name>Bai4</servlet-name>
+        <servlet-class>fit.iuh.se.lehuyhung_21066381_tuan1.Bai4</servlet-class>
+        <init-param>
+            <param-name>servletConfig</param-name>
+            <param-value>Khai báo và sử dụng init-param Bai4.</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Bai4</servlet-name>
+        <url-pattern>/Bai4</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <display-name>LTWWW_JAVA_21066381_TUAN01_LeHuyHung</display-name>
+
+    <servlet>
+        <description/>
+        <display-name>RegistrationForm</display-name>
+        <servlet-name>RegistrationForm</servlet-name>
+        <servlet-class>fit.iuh.se.lehuyhung_21066381_tuan1.RegistrationForm</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrationForm</servlet-name>
+        <url-pattern>/RegistrationForm</url-pattern>
+    </servlet-mapping>
+
+</web-app>
