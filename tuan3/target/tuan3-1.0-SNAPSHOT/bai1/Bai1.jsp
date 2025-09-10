@@ -1,0 +1,107 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="<%=request.getContextPath()%>/registration-form"
+		name="formDangKy" method="GET">
+		First Name: <input type="text" name="firstName"><br> Last
+		Name: <input type="text" name="lastName"><br>
+
+		<!-- Date of Birth Selection -->
+		Date of Birth: Day: <select name="dobDay">
+			<option value="">Day</option>
+			<%
+			for (int i = 1; i <= 31; i++) {
+			%>
+			<option value="<%=i%>"><%=i%></option>
+			<%
+			}
+			%>
+		</select> Month: <select name="dobMonth">
+			<option value="">Month</option>
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+		</select> Year: <select name="dobYear">
+			<option value="">Year</option>
+			<%
+			for (int i = 1980; i <= 2024; i++) {
+			%>
+			<option value="<%=i%>"><%=i%></option>
+			<%
+			}
+			%>
+		</select> <br> Email: <input type="email" name="email"><br>
+		Mobile Number: <input type="text" name="mobileNumber"><br>
+
+		Gender: <input type="radio" name="gender" value="Male"> Male <input
+			type="radio" name="gender" value="Female"> Female<br>
+
+		Address:
+		<textarea name="address"></textarea>
+		<br> City: <input type="text" name="city"><br> Pin
+		Code: <input type="text" name="pinCode"><br> State: <input
+			type="text" name="state"><br> Country: <input
+			type="text" name="country" value="India"><br> Hobbies: <input
+			type="checkbox" name="hobbies" value="Drawing"> Drawing <input
+			type="checkbox" name="hobbies" value="Singing"> Singing <input
+			type="checkbox" name="hobbies" value="Dancing"> Dancing <input
+			type="checkbox" name="hobbies" value="Sketching"> Sketching <input
+			type="checkbox" name="hobbies" value="Others"> Others<br>
+
+		Qualifications:
+		<table>
+			<tr>
+				<td>Examination</td>
+				<td>Board</td>
+				<td>Percentage</td>
+				<td>Year of Passing</td>
+			</tr>
+			<tr>
+				<td>Class X</td>
+				<td><input type="text" name="board[]"></td>
+				<td><input type="text" name="percentage[]"></td>
+				<td><input type="text" name="year[]"></td>
+			</tr>
+			<tr>
+				<td>Class XII</td>
+				<td><input type="text" name="board[]"></td>
+				<td><input type="text" name="percentage[]"></td>
+				<td><input type="text" name="year[]"></td>
+			</tr>
+			<tr>
+				<td>Graduation</td>
+				<td><input type="text" name="board[]"></td>
+				<td><input type="text" name="percentage[]"></td>
+				<td><input type="text" name="year[]"></td>
+			</tr>
+			<tr>
+				<td>Masters</td>
+				<td><input type="text" name="board[]"></td>
+				<td><input type="text" name="percentage[]"></td>
+				<td><input type="text" name="year[]"></td>
+			</tr>
+		</table>
+		<br> Course applies for: <input type="radio" name="course"
+			value="BCA"> BCA <input type="radio" name="course"
+			value="B.Com"> B.Com <input type="radio" name="course"
+			value="B.Sc"> B.Sc <input type="radio" name="course"
+			value="B.A"> B.A<br> <input type="submit" value="Submit">
+	</form>
+
+</body>
+</html>
