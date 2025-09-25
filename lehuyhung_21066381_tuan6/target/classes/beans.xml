@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean for Address -->
+    <bean id="addressBean" class="iuh.fit.se.lehuyhung_21066381_tuan6.xml_based_configuration.model.Address">
+        <property name="city" value="TP.HCM"/>
+        <property name="state" value="Thủ Đức"/>
+        <property name="country" value="Việt Nam"/>
+    </bean>
+
+    <!-- Setter Injection -->
+    <bean id="employeeSetter" class="iuh.fit.se.lehuyhung_21066381_tuan6.xml_based_configuration.model.Employee">
+        <property name="id" value="21066381"/>
+        <property name="name" value="Lê Huy Hùng"/>
+        <property name="address" ref="addressBean"/>
+    </bean>
+
+    <!-- Constructor Injection -->
+    <bean id="employeeConstructor" class="iuh.fit.se.lehuyhung_21066381_tuan6.xml_based_configuration.model.Employee">
+        <constructor-arg value="21066382"/>
+        <constructor-arg value="Nguyễn Văn B"/>
+        <constructor-arg ref="addressBean"/>
+    </bean>
+
+</beans>
